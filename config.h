@@ -3,6 +3,8 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "~/Documents/dwmblocks/music.sh",	1,		2},
 
+    {"", "~/Documents/dwmblocks/newscheck.sh", 0,   3},
+
 	{"", "~/Documents/dwmblocks/clock.sh",	5,		1},
 };
 
