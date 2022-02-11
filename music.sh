@@ -10,8 +10,10 @@ esac
 
 case $BLOCK_BUTTON in
     1) (pgrep ncmpcpp && xdotool set_window --urgency 1 "$(xdotool search --onlyvisible --class 'ncmpcpp')" && dwmc focusurgent ) || $TERMINAL -c ncmpcpp -e ncmpcpp ;;
-    2) mpc toggle && pkill -RTMIN+2 dwmblocks;; 
+    2) mpc toggle && blocks_update 2;;
     3) mpcnotify.sh ;;
+    4) mpc volume +5 ;;
+    5) mpc volume -5 ;;
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
