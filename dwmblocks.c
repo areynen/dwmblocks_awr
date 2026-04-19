@@ -36,7 +36,7 @@ void sighandler(int signum);
 int getstatus(char *str, char *last);
 void setroot();
 void statusloop();
-void termhandler();
+void termhandler(int signum);
 
 
 #include "config.h"
@@ -228,8 +228,9 @@ void sighandler(int signum)
 	writestatus();
 }
 
-void termhandler()
+void termhandler(int signum)
 {
+	(void)signum;
 	statusContinue = 0;
 }
 
